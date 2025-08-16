@@ -73,12 +73,10 @@ class _OnboardingScreenState extends State<OnboardingScreen>
                     position: _slideAnimation,
                     child: Column(
                       children: [
-                        const Spacer(flex: 2),
-
                         // Magic Crystal Logo
                         Container(
                           width: 120,
-                          height: 120,
+                          height: 100,
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
                             gradient: AppTheme.goldGradient,
@@ -101,7 +99,9 @@ class _OnboardingScreenState extends State<OnboardingScreen>
                         // Welcome Text
                         Text(
                           'Welcome to',
-                          style: Theme.of(context).textTheme.headlineMedium
+                          style: Theme.of(context)
+                              .textTheme
+                              .headlineMedium
                               ?.copyWith(color: Colors.white70),
                         ),
                         const SizedBox(height: 8),
@@ -110,10 +110,10 @@ class _OnboardingScreenState extends State<OnboardingScreen>
                           style: Theme.of(
                             context,
                           ).textTheme.displayMedium?.copyWith(
-                            color: AppTheme.shimmeringGold,
-                            fontWeight: FontWeight.bold,
-                            letterSpacing: 1.5,
-                          ),
+                                color: AppTheme.shimmeringGold,
+                                fontWeight: FontWeight.bold,
+                                letterSpacing: 1.5,
+                              ),
                         ),
                         const SizedBox(height: 16),
 
@@ -121,7 +121,9 @@ class _OnboardingScreenState extends State<OnboardingScreen>
                         Text(
                           'Your gateway to the magical world of decentralized finance',
                           textAlign: TextAlign.center,
-                          style: Theme.of(context).textTheme.bodyLarge
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodyLarge
                               ?.copyWith(color: Colors.white60, height: 1.5),
                         ),
 
@@ -215,17 +217,17 @@ class _OnboardingScreenState extends State<OnboardingScreen>
                 Text(
                   title,
                   style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w600,
-                  ),
+                        color: Colors.white,
+                        fontWeight: FontWeight.w600,
+                      ),
                 ),
                 const SizedBox(height: 4),
                 Text(
                   description,
                   style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                    color: Colors.white60,
-                    height: 1.3,
-                  ),
+                        color: Colors.white60,
+                        height: 1.3,
+                      ),
                 ),
               ],
             ),

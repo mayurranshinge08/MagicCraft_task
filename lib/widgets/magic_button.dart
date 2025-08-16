@@ -83,43 +83,39 @@ class _MagicButtonState extends State<MagicButton>
               width: widget.width ?? double.infinity,
               height: widget.height ?? 56,
               decoration: BoxDecoration(
-                gradient:
-                    widget.isPrimary
-                        ? (isEnabled ? AppTheme.spellGradient : null)
-                        : null,
-                color:
-                    widget.isPrimary
-                        ? (isEnabled ? null : Colors.grey.withOpacity(0.3))
-                        : (isEnabled
-                            ? AppTheme.arcanePurple.withOpacity(0.2)
-                            : Colors.grey.withOpacity(0.1)),
+                gradient: widget.isPrimary
+                    ? (isEnabled ? AppTheme.spellGradient : null)
+                    : null,
+                color: widget.isPrimary
+                    ? (isEnabled ? null : Colors.grey.withOpacity(0.3))
+                    : (isEnabled
+                        ? AppTheme.arcanePurple.withOpacity(0.2)
+                        : Colors.grey.withOpacity(0.1)),
                 borderRadius: BorderRadius.circular(16),
                 border: Border.all(
-                  color:
-                      widget.isPrimary
-                          ? (isEnabled
-                              ? AppTheme.shimmeringGold.withOpacity(
-                                0.5 + _glowAnimation.value * 0.3,
-                              )
-                              : Colors.grey.withOpacity(0.3))
-                          : (isEnabled
-                              ? AppTheme.arcanePurple.withOpacity(0.5)
-                              : Colors.grey.withOpacity(0.3)),
+                  color: widget.isPrimary
+                      ? (isEnabled
+                          ? AppTheme.shimmeringGold.withOpacity(
+                              0.5 + _glowAnimation.value * 0.3,
+                            )
+                          : Colors.grey.withOpacity(0.3))
+                      : (isEnabled
+                          ? AppTheme.arcanePurple.withOpacity(0.5)
+                          : Colors.grey.withOpacity(0.3)),
                   width: 1,
                 ),
-                boxShadow:
-                    isEnabled && widget.isPrimary
-                        ? [
-                          BoxShadow(
-                            color: AppTheme.shimmeringGold.withOpacity(
-                              0.3 + _glowAnimation.value * 0.4,
-                            ),
-                            blurRadius: 12 + _glowAnimation.value * 8,
-                            spreadRadius: _glowAnimation.value * 2,
-                            offset: const Offset(0, 4),
+                boxShadow: isEnabled && widget.isPrimary
+                    ? [
+                        BoxShadow(
+                          color: AppTheme.shimmeringGold.withOpacity(
+                            0.3 + _glowAnimation.value * 0.4,
                           ),
-                        ]
-                        : null,
+                          blurRadius: 12 + _glowAnimation.value * 8,
+                          spreadRadius: _glowAnimation.value * 2,
+                          offset: const Offset(0, 4),
+                        ),
+                      ]
+                    : null,
               ),
               child: Material(
                 color: Colors.transparent,
@@ -150,14 +146,13 @@ class _MagicButtonState extends State<MagicButton>
                         else if (widget.icon != null)
                           Icon(
                             widget.icon,
-                            color:
-                                widget.isPrimary
-                                    ? (isEnabled
-                                        ? AppTheme.midnightBlue
-                                        : Colors.grey)
-                                    : (isEnabled
-                                        ? AppTheme.shimmeringGold
-                                        : Colors.grey),
+                            color: widget.isPrimary
+                                ? (isEnabled
+                                    ? AppTheme.midnightBlue
+                                    : Colors.grey)
+                                : (isEnabled
+                                    ? AppTheme.shimmeringGold
+                                    : Colors.grey),
                             size: 20,
                           ),
                         if ((widget.isLoading || widget.icon != null) &&
@@ -167,15 +162,14 @@ class _MagicButtonState extends State<MagicButton>
                           Text(
                             widget.text,
                             style: TextStyle(
-                              color:
-                                  widget.isPrimary
-                                      ? (isEnabled
-                                          ? AppTheme.midnightBlue
-                                          : Colors.grey)
-                                      : (isEnabled
-                                          ? AppTheme.shimmeringGold
-                                          : Colors.grey),
-                              fontSize: 16,
+                              color: widget.isPrimary
+                                  ? (isEnabled
+                                      ? AppTheme.midnightBlue
+                                      : Colors.grey)
+                                  : (isEnabled
+                                      ? AppTheme.shimmeringGold
+                                      : Colors.grey),
+                              fontSize: 12,
                               fontWeight: FontWeight.w600,
                             ),
                           ),
